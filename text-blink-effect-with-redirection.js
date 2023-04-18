@@ -2,7 +2,7 @@
 // https://github.com/Webservice-Digital/404-Error-Landingpage/tree/main
 // Jan Gebser (IT-Consultant)
 // github@brainhub24.com
-// https://webservice.digital
+// https://webservice.digital (DEMO)
 		
 
 // Get the "404 not found" heading element from the index file
