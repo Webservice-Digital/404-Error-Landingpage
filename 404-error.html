@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<link rel="manifest" href="./manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="/@/hotlink-ok/favicon.png">
+    <style>
+        .choice:hover,h1{color:#0C0C0C;background:#fff}
+        body{background-color:black;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100vw;height:100vh;overflow:hidden;font-family:Monospace;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:1.6rem;color:#fff}
+        h1{margin:0;font-size:3rem;font-weight:400;padding:0 4px}
+        .choice{margin-top:16px;letter-spacing:3px;display:inline-block;cursor:pointer}
+        .hide{opacity:0}
+        img{width:100%;max-width:200px;margin-bottom:12px;}
+    </style>
+</head>
+<body>
+    <h1>404 not found</h1>
+    <div class="choice" onclick="redirect(this)">Press any key to continue <span class="blink">_</span></div>
+    <script>
+// Text blink effect including redirection to an specific URL
+// https://github.com/Webservice-Digital/404-Error-Landingpage/tree/main
+// Jan Gebser (IT-Consultant)
+// github@brainhub24.com
+// https://webservice.digital (DEMO)
+		
+
+// Get the "404 not found" heading element from the index file
+const heading = document.querySelector("h1");
+
+// Define the glitch effect function
+function glitchText() {
+  // Generate a random offset for each letter
+  const offsets = Array.from(heading.textContent).map(() => `${Math.floor(Math.random() * 10)}px`);
+
+  // Apply the offsets to each letter
+  heading.style.textShadow = `
+    -1px -1px 0 #fff,
+    ${offsets[0]} ${offsets[1]} 0 #ff0,
+    ${offsets[2]} ${offsets[3]} 0 #0f0,
+    ${offsets[4]} ${offsets[5]} 0 #00f,
+    ${offsets[6]} ${offsets[7]} 0 #f00,
+    ${offsets[8]} ${offsets[9]} 0 #0ff
+  `;
+}
+
+// Call the glitch effect function every 500ms
+setInterval(glitchText, 500);
+
+// Get the HTML element with the class "blink"
+const blinkElement = document.querySelector(".blink");
+
+if (blinkElement) {
+  // Set an interval to toggle the "hide" class on the element every 600 milliseconds
+  setInterval(() => {
+    blinkElement.classList.toggle("hide");
+  }, 600);
+}
+
+// Redirect to the homepage when a key is pressed
+function redirectToHomepage() {
+  // Redirect to the specified URL
+  if (window.location.replace) {
+    window.location.replace("https://netcore.digital/");
+  }
+}
+
+// Set the event handler for the keypress event to call the redirectToHomepage() function
+window.onkeypress = redirectToHomepage;
+</script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v2b4487d741ca48dcbadcaf954e159fc61680799950996" integrity="sha512-D/jdE0CypeVxFadTejKGTzmwyV10c1pxZk/AqjJuZbaJwGMyNHY3q/mTPWqMUnFACfCTunhZUVcd4cV78dK1pQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
