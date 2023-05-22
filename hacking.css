@@ -1,0 +1,27 @@
+/* Styles for Hacking Mode */
+body {
+    background-color: #000000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #00ff00;
+}
+
+h1 {
+    font-size: 32px;
+    color: #00ff00;
+}
+
+a {
+    color: #66ff66;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

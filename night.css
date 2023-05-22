@@ -1,0 +1,20 @@
+/* Styles for Night Mode */
+body {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+a {
+    color: #66ccff;
+}

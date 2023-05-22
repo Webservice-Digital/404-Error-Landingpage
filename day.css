@@ -1,0 +1,19 @@
+/* Styles for Day Mode */
+body {
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+a {
+    color: #007bff;
+}
